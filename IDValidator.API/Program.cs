@@ -1,4 +1,8 @@
+using IDValidator.API.Services;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddScoped<IValidatorService, ValidatorService>();
 
 builder.Services.AddControllers();
 
